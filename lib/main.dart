@@ -1,6 +1,7 @@
 import 'package:bahasaku/Components/LoginPage.dart';
 import 'package:bahasaku/Components/Register.dart';
 import 'package:bahasaku/Components/Splash.dart';
+import 'package:bahasaku/Components/age.dart';
 import 'package:flutter/material.dart';
 
 void main() {

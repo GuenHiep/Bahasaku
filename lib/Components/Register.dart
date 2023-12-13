@@ -1,4 +1,5 @@
 import 'package:bahasaku/Components/LoginPage.dart';
+import 'package:bahasaku/Components/age.dart';
 import 'package:flutter/material.dart';
 import 'package:bahasaku/Components/Splash.dart';
 
@@ -115,7 +116,10 @@ class _RegisterState extends State<Register> {
                           width: 130,
                           height: 50,
                           child: ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(context,
+                                  MaterialPageRoute(builder: (cpntext) => Age()));
+                            },
                             child: Text("Next",
                                 style: TextStyle(
                                     fontSize: 16, fontWeight: FontWeight.w500)),
