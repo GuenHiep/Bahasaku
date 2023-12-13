@@ -4,12 +4,12 @@ import 'package:validators/validators.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
-
   @override
   State<LoginPage> createState() => _LoginPageState();
 }
 
 class _LoginPageState extends State<LoginPage> {
+  bool _obscureText = true;
   final styleText = TextStyle(
       fontSize: 20, color: Color(0xff0074CE), fontWeight: FontWeight.w700);
   final themeColor = Color(0xff0074CE);
@@ -66,7 +66,18 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                           SizedBox(height: 10),
                           TextFormField(
+                            obscureText: _obscureText,
                             decoration: InputDecoration(
+                              suffixIcon: GestureDetector(onTap: (){
+                                setState(() {
+                                  _obscureText=!_obscureText;
+                                });
+                              },
+                                child: Icon(_obscureText
+                                    ?Icons.visibility
+                                    :Icons.visibility_off
+                                ),
+                              ),
                                 hintText: 'Password....',
                                 enabledBorder: OutlineInputBorder(
                                     borderSide:
@@ -293,10 +304,12 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                           TextButton(
                               onPressed: () {
-                                Navigator.push(context, MaterialPageRoute(builder: (cpntext)=> Register()));
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (cpntext) => Register()));
                               },
-                              child: Text('Register')
-                          )
+                              child: Text('Register'))
                         ],
                       ),
                     ],

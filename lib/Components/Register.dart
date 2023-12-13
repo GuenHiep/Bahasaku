@@ -52,12 +52,12 @@ class _RegisterState extends State<Register> {
                     Text(
                       'Create Your Profile',
                       style: TextStyle(
-                        fontSize: 32,
+                        fontSize: 28,
                         fontWeight: FontWeight.w400,
                       ),
                     ),
                     SizedBox(
-                      height: 10,
+                      height: 5,
                     ),
                     Text(
                       'Now!',
@@ -67,7 +67,7 @@ class _RegisterState extends State<Register> {
                       ),
                     ),
                     SizedBox(
-                      height: 20,
+                      height: 10,
                     ),
                     SizedBox(
                       width: 300,
@@ -80,7 +80,7 @@ class _RegisterState extends State<Register> {
                       ),
                     ),
                     SizedBox(
-                      height: 30,
+                      height: 15,
                     ),
                     SizedBox(
                       height: 40,
